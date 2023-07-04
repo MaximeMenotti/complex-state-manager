@@ -4,10 +4,10 @@ import { setCurrentBrickIndex } from "../redux/content/contentSlice";
 
 function BrickSelector() {
   const currentIndex = useSelector(
-    (state: RootState) => state.content.currentBrickIndex
+    (state: RootState) => state.undoableContent.present.currentBrickIndex
   );
   const bricks = useSelector(
-    (state: RootState) => state.content.value.brickList
+    (state: RootState) => state.undoableContent.present.value.brickList
   );
   const dispatch = useDispatch();
 

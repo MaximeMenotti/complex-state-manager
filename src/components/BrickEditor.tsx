@@ -8,7 +8,9 @@ import { ChangeEvent } from "react";
 function BrickEditor() {
   const brick = useSelector(
     (state: RootState) =>
-      state.content.value.brickList[state.content.currentBrickIndex]
+      state.undoableContent.present.value.brickList[
+        state.undoableContent.present.currentBrickIndex
+      ]
   );
 
   const dispatch = useDispatch();

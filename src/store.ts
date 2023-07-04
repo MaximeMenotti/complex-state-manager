@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import contentReducer from "./redux/content/contentSlice";
+import undoable from "redux-undo";
 
 export const store = configureStore({
   reducer: {
-    content: contentReducer,
+    undoableContent: undoable(contentReducer),
   },
 });
 
