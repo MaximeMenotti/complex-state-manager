@@ -1,7 +1,6 @@
-import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
-import { updateCurrentBrickProperty } from "../redux/content/contentSlice";
+import { updateCurrentBrickProperty } from "../core/content/contentSlice";
 import TextInput from "./TextInput";
 import { ChangeEvent } from "react";
 
@@ -14,6 +13,10 @@ function BrickEditor() {
   );
 
   const dispatch = useDispatch();
+  if (!brick) {
+    return null;
+  }
+
   return (
     <>
       <TextInput

@@ -1,11 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import contentReducer from "./redux/content/contentSlice";
+import contentReducer from "./core/content/contentSlice";
 import undoable from "redux-undo";
+import alertReducer from "./core/alert/alertSlice";
+import { logger } from "./redux/middlewares/logger";
 
 export const store = configureStore({
   reducer: {
     undoableContent: undoable(contentReducer),
+    alerts: alertReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

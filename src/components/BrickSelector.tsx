@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
-import { setCurrentBrickIndex } from "../redux/content/contentSlice";
+import { setCurrentBrickIndex } from "../core/content/contentSlice";
 
 function BrickSelector() {
   const currentIndex = useSelector(

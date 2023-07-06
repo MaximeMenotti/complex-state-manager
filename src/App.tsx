@@ -2,16 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./store";
 
 import PrettyJsonDisplay from "./components/PrettyJsonDisplay";
-import { addBrick } from "./redux/content/contentSlice";
+import { addBrick } from "./core/content/contentSlice";
 import BrickEditor from "./components/BrickEditor";
 import BrickSelector from "./components/BrickSelector";
 import Button from "./components/Button";
-import { v4 as uuidv4 } from "uuid";
-import { useHotkeys } from "react-hotkeys-hook";
-
-import { ActionCreators } from "redux-undo";
-import ShorcutDisplay from "./components/ShortcutDisplay";
+import { v4 as uuidv4, v4 } from "uuid";
 import HotKeys from "./components/HotKeys";
+import Notifications from "./components/Notifications";
+import { createAlert, createTimeoutAlert } from "./core/alert/alertSlice";
 
 function App() {
   const content = useSelector(
@@ -43,6 +41,7 @@ function App() {
           <PrettyJsonDisplay data={content} />
         </div>
       </div>
+      <Notifications />
     </>
   );
 }
