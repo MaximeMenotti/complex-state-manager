@@ -1,5 +1,5 @@
 import { useHotkeys } from "react-hotkeys-hook";
-import ShorcutDisplay from "./ShortcutDisplay";
+import ShortcutDisplay from "./ShortcutDisplay";
 import { ActionCreators } from "redux-undo";
 import { useDispatch } from "react-redux";
 import { createTimeoutAlert } from "../core/alert/alertSlice";
@@ -34,8 +34,8 @@ function HotKeys() {
 
   return (
     <div className="flex gap-4 m-4">
-      <ShorcutDisplay keys={["⌘", "z"]} label="Undo" />
-      <ShorcutDisplay keys={["⌘", "⇧", "z"]} label="Redo" />
+      <ShortcutDisplay keys={["⌘", "z"]} label="Undo" />
+      <ShortcutDisplay keys={["⌘", "⇧", "z"]} label="Redo" />
     </div>
   );
 }

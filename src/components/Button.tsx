@@ -1,8 +1,4 @@
-import {
-  ChangeEventHandler,
-  FunctionComponent,
-  MouseEventHandler,
-} from "react";
+import { FunctionComponent, MouseEventHandler } from "react";
 
 interface TextInputProps {
   onClick: MouseEventHandler;

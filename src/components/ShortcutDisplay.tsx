@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
 
-interface ShorcutDisplayProps {
+interface ShortcutDisplayProps {
   keys: string[];
   label?: string;
 }
 
-const ShorcutDisplay: FunctionComponent<ShorcutDisplayProps> = ({
+const ShortcutDisplay: FunctionComponent<ShortcutDisplayProps> = ({
   keys,
   label,
 }) => {
@@ -24,4 +24,4 @@ const ShorcutDisplay: FunctionComponent<ShorcutDisplayProps> = ({
   );
 };
 
-export default ShorcutDisplay;
+export default ShortcutDisplay;
