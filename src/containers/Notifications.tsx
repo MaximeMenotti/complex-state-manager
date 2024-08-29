@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import Notification from "./Notification";
+import Notification from "../components/Notification";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 

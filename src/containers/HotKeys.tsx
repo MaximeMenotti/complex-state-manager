@@ -1,5 +1,5 @@
 import { useHotkeys } from "react-hotkeys-hook";
-import ShortcutDisplay from "./ShortcutDisplay";
+import ShortcutDisplay from "../components/ShortcutDisplay";
 import { ActionCreators } from "redux-undo";
 import { useDispatch } from "react-redux";
 import { createTimeoutAlert } from "../core/alert/alertSlice";

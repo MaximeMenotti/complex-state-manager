@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { updateCurrentBrickProperty } from "../core/content/contentSlice";
-import TextInput from "./TextInput";
+import TextInput from "../components/TextInput";
 import { ChangeEvent } from "react";
 
 function BrickEditor() {

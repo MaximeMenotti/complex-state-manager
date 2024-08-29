@@ -3,12 +3,12 @@ import { RootState } from "./store";
 
 import PrettyJsonDisplay from "./components/PrettyJsonDisplay";
 import { addBrick } from "./core/content/contentSlice";
-import BrickEditor from "./components/BrickEditor";
-import BrickSelector from "./components/BrickSelector";
+import BrickEditor from "./containers/BrickEditor";
+import BrickSelector from "./containers/BrickSelector";
 import Button from "./components/Button";
 import { v4 as uuidv4, v4 } from "uuid";
-import HotKeys from "./components/HotKeys";
-import Notifications from "./components/Notifications";
+import HotKeys from "./containers/HotKeys";
+import Notifications from "./containers/Notifications";
 import { createAlert, createTimeoutAlert } from "./core/alert/alertSlice";
 
 function App() {
