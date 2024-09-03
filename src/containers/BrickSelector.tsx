@@ -1,15 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store";
-import { setCurrentBrickIndex } from "../core/content/contentSlice";
+import { useBoundStore } from "../store";
 
 function BrickSelector() {
-  const currentIndex = useSelector(
-    (state: RootState) => state.undoableContent.present.currentBrickIndex
+  const currentIndex = useBoundStore((state) => state.currentBrickIndex);
+  const setCurrentBrickIndex = useBoundStore(
+    (state) => state.setCurrentBrickIndex
   );
-  const bricks = useSelector(
-    (state: RootState) => state.undoableContent.present.value.brickList
-  );
-  const dispatch = useDispatch();
+
+  const bricks = useBoundStore((state) => state.value.brickList);
 
   if (bricks.length < 2) {
     return null;
@@ -20,7 +17,7 @@ function BrickSelector() {
       {bricks.map((brick, index) => (
         <button
           key={brick.id}
-          onClick={() => dispatch(setCurrentBrickIndex(index))}
+          onClick={() => setCurrentBrickIndex(index)}
           className={`join-item btn ${currentIndex === index && "btn-active"}`}
         >
           {index}
